@@ -1,0 +1,27 @@
+{
+  "name": "powermeter",
+  "preferGlobal": "false",
+  "version": "0.0.1",
+  "author": "David Rubert <david.rubert@gmail.com>",
+  "description": "Power measurement and management",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tombatossals/powermeter.git"
+  },
+  "keywords": [
+    "node",
+    "mongo",
+    "server"
+  ],
+  "dependencies" : {
+    "express"   :  "*",
+    "passport"   :  "*",
+    "passport-google-oauth"   :  "*",
+    "jade"   :  "*",
+    "forever" :  "*"
+  },
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.6"
+  }
+}
