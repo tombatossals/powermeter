@@ -1,0 +1,24 @@
+!!! 5
+html
+  head
+    title= typeof(title) !== 'undefined' ? title : "Power management"
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/custom.css')
+    link(rel='stylesheet', href='css/bootstrap-responsive.min.css')
+    script(src='js/libs/require/require.js', data-main='js/main')
+
+  body
+    div.navbar.navbar-static
+        div.navbar-inner
+            div.container-fluid
+                a#title.brand(href='#') Power Management
+                div.nav-collapse
+                    ul.nav.pull-right.span3
+                        li
+                            div.btn-toolbar
+                                div.btn-group(data-toggle='buttons-radio')
+                                    button#latest.btn List all computers
+                                    button#letters.btn My Computers
+
+    #main
+      != body

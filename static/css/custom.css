@@ -1,0 +1,57 @@
+body {
+  padding: 1em;
+  background: #b5daff;
+}
+
+div.navbar {
+}
+
+.sidebar-nav {
+  padding: 9px 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar .nav .open > .dropdown-toggle, .navbar .nav .active > .dropdown-toggle, .navbar .nav .open.active > .dropdown-toggle {
+	background-color: hsl(208, 100%, 40%);
+}
+
+.nav > .btn-group {
+	float: right;
+}
+
+footer {
+	margin: .2em 1em;
+}
+
+footer a {
+	border-top: 1px solid #888;
+	padding: 1em;
+}
+
+ul.nav li {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+a#title {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: white;
+}
+
+.thumbnails {
+    text-align: left;
+}
+
+div.navbar {
+    margin-bottom: 0;
+}
+
+div#main {
+    margin: 2em;
+    font-size: 1.4em;
+}
