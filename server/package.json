@@ -16,7 +16,7 @@
   "dependencies" : {
     "express"   :  "*",
     "passport"   :  "*",
-    "passport-google-oauth"   :  "*",
+    "passport-google"   :  "*",
     "jade"   :  "*",
     "forever" :  "*"
   },
