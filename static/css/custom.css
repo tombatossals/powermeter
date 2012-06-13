@@ -1,6 +1,5 @@
 body {
   padding: 1em;
-  background: #b5daff;
 }
 
 div.navbar {
@@ -34,7 +33,6 @@ footer a {
 ul.nav li {
     color: #FFF;
     font-weight: bold;
-    font-size: 1.4em;
 }
 
 a#title {
@@ -54,4 +52,12 @@ div.navbar {
 div#main {
     margin: 2em;
     font-size: 1.4em;
+}
+
+div.well {
+    margin: 0;
+}
+
+td.center {
+    text-align: center;
 }

@@ -2,41 +2,43 @@
 html
   head
     title= typeof(title) !== 'undefined' ? title : "Power management"
-    link(rel='stylesheet', href='css/bootstrap.min.css')
-    link(rel='stylesheet', href='css/custom.css')
-    link(rel='stylesheet', href='css/bootstrap-responsive.min.css')
-    script(src='js/libs/require/require.js', data-main='js/main')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/css/custom.css')
+    script(src='/js/libs/require/require.js', data-main='js/main')
 
   body
     div.navbar.navbar-static
         div.navbar-inner
             div.container-fluid
                 a#title.brand(href='#') Power Management
-                div.nav-collapse
-                    ul.nav.pull-right
-                        li
-                            div.btn-toolbar
-                                div.btn-group(data-toggle='buttons-radio')
-                                    button#graphs.btn Gráficas
-                                    button#stats.btn Estadísticas
-                         li
-                            div.btn-toolbar
-                                - if (user)
-                                    button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown")
-                                        i.icon-plus.icon-white 
-                                        | #{user.displayName}
-                                        span.caret
-                                    ul.dropdown-menu
-                                        li
-                                            a(href="/profile/keys")
-                                                i.icon-star-empty
-                                                | Gestionar keys SSH
-                                        li
-                                            a(href="/logout")
-                                                Salir
-
-                                - else
-                                    a(href='/auth/google')
-                                        button.btn.btn-primary Accedir
+                div.nav-collapse.pull-right
+                    div.btn-toolbar
+                        div.btn-group(data-toggle='buttons-radio')
+                            a.btn-large.btn(href="/graphs/") Gráficas
+                            a.btn-large.btn(href="/stats/") Estadísticas
+                        div.btn-group
+                            - if (user)
+                                a.btn.btn-large.btn-primary(href="/profile")
+                                    i.icon-th-large.icon-white 
+                                    |&nbsp;#{user.displayName}
+                                button.btn.btn-large.btn-primary.dropdown-toggle(data-toggle="dropdown")
+                                    span.caret
+                                ul.dropdown-menu
+                                    li
+                                        a(href="/profile")
+                                            i.icon-user
+                                            |&nbsp;Perfil de usuario
+                                    li
+                                        a(href="/profile/keys")
+                                            i.icon-star-empty
+                                            |&nbsp;Gestionar keys SSH
+                                    li.divider
+                                    li
+                                        a(href="/logout")
+                                            i.icon-off
+                                            |&nbsp;Salir 
+                            - else
+                                a.btn.btn-large.btn-primary(href="/auth/google") Accedir
     #main
       != body

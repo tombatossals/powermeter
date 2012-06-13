@@ -18,6 +18,8 @@
     "passport"   :  "*",
     "passport-google"   :  "*",
     "jade"   :  "*",
+    "mongoose"   :  "*",
+    "connect-mongodb"   :  "*",
     "forever" :  "*"
   },
   "license": "MIT",
