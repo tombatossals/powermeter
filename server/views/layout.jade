@@ -13,12 +13,30 @@ html
             div.container-fluid
                 a#title.brand(href='#') Power Management
                 div.nav-collapse
-                    ul.nav.pull-right.span3
+                    ul.nav.pull-right
                         li
                             div.btn-toolbar
                                 div.btn-group(data-toggle='buttons-radio')
-                                    button#latest.btn List all computers
-                                    button#letters.btn My Computers
+                                    button#graphs.btn Gráficas
+                                    button#stats.btn Estadísticas
+                         li
+                            div.btn-toolbar
+                                - if (user)
+                                    button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown")
+                                        i.icon-plus.icon-white 
+                                        | #{user.displayName}
+                                        span.caret
+                                    ul.dropdown-menu
+                                        li
+                                            a(href="/profile/keys")
+                                                i.icon-star-empty
+                                                | Gestionar keys SSH
+                                        li
+                                            a(href="/logout")
+                                                Salir
 
+                                - else
+                                    a(href='/auth/google')
+                                        button.btn.btn-primary Accedir
     #main
       != body
