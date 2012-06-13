@@ -15,3 +15,7 @@ var UserSchema = new Schema({
 });
 
 module.exports = mongoose.model('User', UserSchema);
+
+UserSchema.method('findOrCreate', function(profile, callback) {
+    console.log(profile);
+});

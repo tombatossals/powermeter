@@ -14,10 +14,11 @@ passport.use(new GoogleStrategy({
     realm: 'http://localhost:3000/'
   },
   function(identifier, profile, done) {
-    // asynchronous verification, for effect...
-    process.nextTick(function () {
-      profile.identifier = identifier;
-      return done(null, profile);
+    User.findOrCreate(profile, function (err, user) {
+        process.nextTick(function () {
+            profile.identifier = identifier;
+            return done(null, profile);
+        });
     });
   }
 ));
