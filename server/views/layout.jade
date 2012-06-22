@@ -5,13 +5,13 @@ html
     link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/bootstrap-responsive.min.css')
     link(rel='stylesheet', href='/css/custom.css')
-    script(src='/js/libs/require/require.js', data-main='js/main')
+    script(src='/js/libs/require/require.js', data-main='/js/main')
 
   body
     div.navbar.navbar-static
         div.navbar-inner
             div.container-fluid
-                a#title.brand(href='#') Power Management
+                a#title.brand(href='/') Power Management
                 div.nav-collapse.pull-right
                     div.btn-toolbar
                         div.btn-group(data-toggle='buttons-radio')
@@ -19,20 +19,20 @@ html
                             a.btn-large.btn(href="/stats/") Estadísticas
                         div.btn-group
                             - if (user)
-                                a.btn.btn-large.btn-primary(href="/profile")
+                                a.btn.btn-large.btn-primary(href="/profile/manage")
                                     i.icon-th-large.icon-white 
                                     |&nbsp;#{user.displayName}
                                 button.btn.btn-large.btn-primary.dropdown-toggle(data-toggle="dropdown")
                                     span.caret
                                 ul.dropdown-menu
                                     li
-                                        a(href="/profile")
+                                        a(href="/profile/manage")
                                             i.icon-user
                                             |&nbsp;Perfil de usuario
                                     li
-                                        a(href="/profile/keys")
+                                        a(href="/computers/manage")
                                             i.icon-star-empty
-                                            |&nbsp;Gestionar keys SSH
+                                            |&nbsp;Gestionar equipos
                                     li.divider
                                     li
                                         a(href="/logout")

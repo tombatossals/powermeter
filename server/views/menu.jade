@@ -1,0 +1,15 @@
+- var sections = { profile: 'Tu Perfil', computers: 'Tus Equipos' }
+- var items = { profile: { manage: "Gestionar" }, computers: { manage: 'Gestionar', add: 'Añadir' } }
+
+div.well.span2
+    ul.nav.nav-list
+        - for name, section_path in sections
+            li.nav-header #{ name }
+            - var subsections = items[section_path]
+            - for subsection_name, subsection_path in subsections
+                - if ( subsection_path == subsection_active && section_path == section_active )
+                    li(class='active')
+                        a(href= "/" + section + "/"' + subsection_path) #{ subsection_name }
+                - else
+                    li
+                        a(href = "/" + section + "/" + subsection_path) #{ subsection_name }

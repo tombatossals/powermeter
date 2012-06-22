@@ -8,14 +8,11 @@ var passport = require('passport');
 // Define schema
 var UserSchema = new Schema({
     name : { 
-        first: { type: String, required: true } 
-      , last: { type: String, required: true }
+        givenName: { type: String, required: true } 
+      , familyName: { type: String, required: true }
     }
-  , email: { type: String, unique: true }
+  , displayName: { type: String, unique: true }
+  , email: [ { type: String, unique: true } ]
 });
 
 module.exports = mongoose.model('User', UserSchema);
-
-UserSchema.method('findOrCreate', function(profile, callback) {
-    console.log(profile);
-});

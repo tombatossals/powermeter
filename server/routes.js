@@ -10,16 +10,16 @@ module.exports = function(app) {
       res.render('home', { user: req.user });
     });
 
-    app.get('/profile', ensureAuthenticated, function(req, res){
-      res.render('profile', { user: req.user });
+    app.get('/profile/manage', ensureAuthenticated, function(req, res){
+      res.render('profile', { user: req.user, section_active: 'profile', subsection_active: 'manage' });
     });
 
-    app.get('/profile/keys', ensureAuthenticated, function(req, res){
-      res.render('profile_keys', { user: req.user });
+    app.get('/computers/manage', ensureAuthenticated, function(req, res){
+      res.render('computers', { user: req.user, section_active: 'computers', subsection_active: 'manage' });
     });
 
-    app.get('/profile/keys/add', ensureAuthenticated, function(req, res){
-      res.render('profile_keys_add', { user: req.user });
+    app.get('/computers/add', ensureAuthenticated, function(req, res){
+      res.render('computers_add', { user: req.user, section_active: 'computers', subsection_active: 'add' });
     });
 
     app.get('/login', function(req, res){

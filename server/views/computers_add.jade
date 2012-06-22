@@ -1,0 +1,19 @@
+include menu
+
+div.span7
+    h1 Añadir equipo
+    form.form-vertical(method="post")
+        fieldset
+            div.control-group
+                label.control-label(for="ip") IP
+                    div.controls
+                        input.input-xlarge(type="text", name="ip") Dirección IP
+                        p.help-block Introduce la dirección IP de la máquina a monitorizar
+            div.control-group
+                label.control-label(for="mac") MAC
+                    div.controls
+                        input.input-xlarge(type="text", name="mac") Dirección MAC
+                        p.help-block Introduce la dirección MAC del equipo a monitorizar
+            div.form-actions
+                button.btn.btn-primary(type="submit") Guardar
+                a.btn(href="/profile/computers") Cancelar
