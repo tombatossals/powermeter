@@ -12,6 +12,7 @@ passport.use(new GoogleStrategy({
             User.findOne( { 'email': email }, function(err, user) {
                 if (!user) {
                     profile['email'] = email;
+                    console.log(profile);
                     delete profile['emails'];
                     var user = User.create(profile, function(err, user) {
                         return done(err, email);

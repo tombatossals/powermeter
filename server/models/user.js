@@ -9,7 +9,7 @@ var UserSchema = new Schema({
         givenName: { type: String, required: true } 
       , familyName: { type: String, required: true }
     }
-  , displayName: { type: String, unique: true, required: true }
+  , displayName: { type: String, required: true }
   , email: [ { type: String, unique: true, required: true } ]
 });
 
